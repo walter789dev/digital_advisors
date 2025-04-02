@@ -1,0 +1,10 @@
+---
+import { Image } from 'astro:assets'
+import LogoImage from '../assets/images/logo.webp'
+import MenuImage from '../assets/svg/menu.svg'
+---
+
+<nav class="flex justify-between items-center h-12 px-3 border-b-1 border-b-gray-300">
+    <Image class="size-18" src={LogoImage} alt="Logo de Digital Advisors" />
+    <Image src={MenuImage} alt="Logo de Digital Advisors" />
+</nav>

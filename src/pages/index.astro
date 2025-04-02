@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+import Layout from '../layouts/Layout.astro';
+import HeroImage from "../components/HeroImage.astro";
+import MainImage from '../assets/images/hero-image.webp'
+import Solutions from "../components/Solutions.astro";
+
+const MainText = {
+    title: "Impulsando tu transformación",
+    description: "Ayudamos a empresas a modernizar sus procesos con soluciones digitales a medida y optimizadas."
+}
+---
+
+<Layout>
+	<HeroImage slot="hero-image" image={MainImage} {...MainText} />
+    <Solutions />
+</Layout>
