@@ -2,11 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout> 
+<Layout>
   <section class="container__about">
     <div class="container__about-presentacion">
       <h2>Quienes somos</h2>
-      <p>
+      <p class="about-presentacion__text">
         Impulsamos la transformación digital de las pymes, diseñando soluciones
         personalizadas que perfeccionan la gestión de datos y procesos, para un
         progreso firme y duradero.
@@ -15,34 +15,36 @@ import Layout from "../layouts/Layout.astro";
       <div></div>
     </div>
     <!-- Objetivo -->
-    <div>
+    <div class="about__objetivo">
       <p>
-        En <strong class="strongWord">Digital Advisors</strong>, ayudamos a pequeñas y medianas
-        empresas a aprovechar el poder de la digitalización. Nacimos con la misión
-        de simplificar la transformación digital, ofreciendo soluciones
-        personalizadas para optimizar procesos, analizar datos y mejorar la toma
-        de decisiones. Creemos que la tecnología debe ser una aliada estratégica,
-        permitiendo a los negocios crecer de manera eficiente y sostenible.
+        En <strong class="strongWord">Digital Advisors</strong>, ayudamos a
+        pequeñas y medianas empresas a aprovechar el poder de la digitalización.
+        Nacimos con la misión de simplificar la transformación digital,
+        ofreciendo <em>soluciones personalizadas</em> para optimizar procesos, analizar datos y mejorar la toma de decisiones. Creemos que la tecnología debe ser una aliada estratégica, permitiendo a los negocios crecer de manera eficiente y sostenible.
       </p>
       <p>Brindamos:</p>
       <ul>
         <li>
-          <strong class="strongWord">Innovación</strong> → Buscamos siempre las mejores soluciones tecnológicas.
+          <strong class="strongWord">Innovación</strong> → Buscamos siempre las mejores
+          soluciones tecnológicas.
         </li>
         <li>
-          <strong class="strongWord">Compromiso</strong> → Acompañamos a cada empresa en su transformación digital.
+          <strong class="strongWord">Compromiso</strong> → Acompañamos a cada empresa
+          en su transformación digital.
         </li>
         <li>
-          <strong class="strongWord">Eficiencia</strong> → Optimizamos procesos para maximizar resultados.
+          <strong class="strongWord">Eficiencia</strong> → Optimizamos procesos para
+          maximizar resultados.
         </li>
         <li>
-          <strong class="strongWord">Confianza</strong> → Construimos relaciones basadas en transparencia y profesionalismo.
+          <strong class="strongWord">Confianza</strong> → Construimos relaciones
+          basadas en transparencia y profesionalismo.
         </li>
       </ul>
     </div>
     <!-- Mision  -->
     <div>
-      <img src="/images/img-mision.png" alt="Mision"  />
+      <img src="/images/img-mision.png" alt="Mision" />
       <div>
         <h3>Nuestra Mision</h3>
         <p>
@@ -63,10 +65,10 @@ import Layout from "../layouts/Layout.astro";
           soluciones accesibles, efectivas y adaptadas a cada necesidad.
         </p>
       </div>
-      <img src="/images/img-vision.png" alt="Vision"  />
+      <img src="/images/img-vision.png" alt="Vision" />
     </div>
   </section>
-  </Layout>
+</Layout>
 <style>
   .container__about {
     display: flex;
@@ -75,8 +77,36 @@ import Layout from "../layouts/Layout.astro";
     padding: 2rem;
     width: 1120px;
   }
-  
-  h2, h3, .strongWord{
-    color: #0A3D62;
+
+  h2,
+  h3,
+  .strongWord {
+    color: #0a3d62;
   }
-  </style>
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .container__about-presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container__about-presentacion h2 {
+    font-size: 3.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-presentacion__text {
+    width: 740px;
+    text-align: center;
+  }
+  /* objetivo */
+  .about__objetivo p {
+    line-height: 1.8;
+  }
+</style>
