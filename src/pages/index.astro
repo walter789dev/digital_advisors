@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import HeroImage from "../components/HeroImage.astro";
 import MainImage from '../assets/images/hero-image.webp'
 import Solutions from "../components/Solutions.astro";
+import WhyChoose from "../components/WhyChoose.astro";
 
 const MainText = {
     title: "Impulsando tu transformación",
@@ -14,4 +15,5 @@ const MainText = {
 <Layout>
 	<HeroImage slot="hero-image" image={MainImage} {...MainText} />
     <Solutions />
+    <WhyChoose />
 </Layout>

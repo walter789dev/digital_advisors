@@ -1,0 +1,39 @@
+---
+import CardChoose from "./CardChoose.astro";
+
+const elections = [
+  {
+    title: "Innovación",
+    description:
+      "Impulsamos el futuro con soluciones tecnológicas de vanguardia. Exploramos nuevas fronteras y transformamos ideas en realidades digitales",
+  },
+  {
+    title: "Compromiso",
+    description:
+      "Trabajamos en estrecha colaboración para diseñar soluciones personalizadas que superen sus expectativas.",
+  },
+  {
+    title: "Eficiencia",
+    description:
+      "Maximizamos el rendimiento optimizando cada proceso, logrando resultados superiores de manera ágil y efectiva.",
+  },
+];
+---
+
+<section class="mt-4 pt-12 pb-2 bg-(--secondary-color)">
+  <h2 class="text-center text-2xl font-semibold">
+    ¿Por qué <span class="text-(--primary-color)">elegirnos</span>
+  </h2>
+  <p class="my-6 mx-5 text-center text-(--accent-color)">
+    Nacimos con la misión de simplificar la transformación digital, ofreciendo
+    soluciones personalizadas para optimizar procesos, analizar datos y mejorar
+    la toma de decisiones.
+  </p>
+  <section class="mx-5 my-12">
+    {
+      elections.map((election) => (
+        <CardChoose title={election.title} description={election.description} />
+      ))
+    }
+  </section>
+</section>
