@@ -11,8 +11,7 @@ import Layout from "../layouts/Layout.astro";
         personalizadas que perfeccionan la gestión de datos y procesos, para un
         progreso firme y duradero.
       </p>
-      <!-- Aca van las imagenes  -->
-      <div></div>
+      <img src="/images/oficina.png" alt="Oficinas" />
     </div>
     <!-- Objetivo -->
     <div class="about__objetivo">
@@ -20,7 +19,10 @@ import Layout from "../layouts/Layout.astro";
         En <strong class="strongWord">Digital Advisors</strong>, ayudamos a
         pequeñas y medianas empresas a aprovechar el poder de la digitalización.
         Nacimos con la misión de simplificar la transformación digital,
-        ofreciendo <em>soluciones personalizadas</em> para optimizar procesos, analizar datos y mejorar la toma de decisiones. Creemos que la tecnología debe ser una aliada estratégica, permitiendo a los negocios crecer de manera eficiente y sostenible.
+        ofreciendo <em>soluciones personalizadas</em> para optimizar procesos, analizar
+        datos y mejorar la toma de decisiones. Creemos que la tecnología debe ser
+        una aliada estratégica, permitiendo a los negocios crecer de manera eficiente
+        y sostenible.
       </p>
       <p>Brindamos:</p>
       <ul>
@@ -43,29 +45,28 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <!-- Mision  -->
-    <div>
+
+    <div class="about__mision">
+      <h3>Nuestra Mision</h3>
       <img src="/images/img-mision.png" alt="Mision" />
-      <div>
-        <h3>Nuestra Mision</h3>
-        <p>
-          Impulsar la digitalización de las pymes, brindando herramientas
-          innovadoras y asesoramiento estratégico para optimizar su operación,
-          mejorar su competitividad y facilitar la toma de decisiones basada en
-          datos.
-        </p>
-      </div>
+      <p class="about__mision-text">
+        Impulsar la digitalización de las pymes, brindando herramientas
+        innovadoras y asesoramiento estratégico para optimizar su operación,
+        mejorar su competitividad y facilitar la toma de decisiones basada en
+        datos.
+      </p>
     </div>
+
     <!-- Vision  -->
-    <div>
-      <div>
-        <h3>Nuestra Vision</h3>
-        <p>
-          Ser el referente en digitalización para pymes en Argentina,
-          contribuyendo a la modernización del ecosistema empresarial mediante
-          soluciones accesibles, efectivas y adaptadas a cada necesidad.
-        </p>
-      </div>
+
+    <div class="about__vision">
+      <h3>Nuestra Vision</h3>
       <img src="/images/img-vision.png" alt="Vision" />
+      <p class="about__vision-text">
+        Ser el referente en digitalización para pymes en Argentina,
+        contribuyendo a la modernización del ecosistema empresarial mediante
+        soluciones accesibles, efectivas y adaptadas a cada necesidad.
+      </p>
     </div>
   </section>
 </Layout>
@@ -73,9 +74,10 @@ import Layout from "../layouts/Layout.astro";
   .container__about {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    width: 1120px;
+    gap: 1rem;
+    padding: 40px;
+    width: 440px;
+    font-family: "Playfair Display";
   }
 
   h2,
@@ -85,28 +87,61 @@ import Layout from "../layouts/Layout.astro";
   }
 
   p {
-    font-size: 1.3rem;
+    font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 30px;
   }
 
   .container__about-presentacion {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 360px;
   }
 
   .container__about-presentacion h2 {
-    font-size: 3.1rem;
+    font-size: 25px;
     margin-bottom: 1rem;
   }
 
   .about-presentacion__text {
-    width: 740px;
+    width: 360px;
     text-align: center;
   }
+  .container__about-presentacion img {
+    width: 360px;
+  }
   /* objetivo */
+  .about__objetivo {
+    font-size: 14px;
+  }
   .about__objetivo p {
+    line-height: 1.8;
+  }
+  .about__objetivo ul {
+    line-height: 1.8;
+  }
+
+  /* mision y vision */
+  .about__mision,
+  .about__vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  img {
+    width: 290px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .about__mision-text,
+  .about__vision-text {
+    width: 360px;
+    text-align: center;
+    font-size: 14px;
     line-height: 1.8;
   }
 </style>
