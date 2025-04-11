@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -58,7 +59,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <!-- Vision  -->
-
     <div class="about__vision">
       <h3 class="about__vision-content">Nuestra Vision</h3>
       <img src="/images/img-vision.png" alt="Vision" />
@@ -69,6 +69,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </div>
   </section>
+  
 </Layout>
 <style>
   /* --- ESTILOS BASE: MOBILE FIRST --- */
@@ -76,8 +77,10 @@ import Layout from "../layouts/Layout.astro";
   .container__about {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    padding: 40px;
+    padding: 40px ;
+    margin: 0 auto;;
     width: 400px;
     font-family: "Playfair Display";
   }
@@ -112,7 +115,7 @@ import Layout from "../layouts/Layout.astro";
   }
   .container__about-presentacion img {
     width: 100%;
-  height: 295px;
+  height: 310px;
   object-fit: cover;
   object-position: center;
   }
