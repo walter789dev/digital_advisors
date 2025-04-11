@@ -9,13 +9,13 @@
     </div>
     <div class="footer__socials">
       <a href="https://www.instagram.com/"
-        ><img src="/public/svg/Instagram.svg" alt="Instagram" /></a
+        ><img class="footer__socials-media" src="/public/svg/Instagram.svg" alt="Instagram" /></a
       >
       <a href="https://www.linkedin.com/"
-        ><img src="/public/svg/Linkedin.svg" alt="Linkedin" /></a
+        ><img class="footer__socials-media" src="/public/svg/Linkedin.svg" alt="Linkedin" /></a
       >
       <a href="https://www.facebook.com/"
-        ><img src="/public/svg/Twitter.svg" alt="Twitter" /></a
+        ><img class="footer__socials-media" src="/public/svg/Twitter.svg" alt="Twitter" /></a
       >
     </div>
   </div>
@@ -30,7 +30,7 @@
   .footerContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 40px;
+    margin: 0 20px;
   }
 
   .footer__datos {
@@ -54,6 +54,10 @@
     gap: 20px;
     padding: 0 20px;
     cursor: pointer;
+  }
+
+  .footer__socials-media{
+    width: 30px;
   }
 
   .footer__info p {
