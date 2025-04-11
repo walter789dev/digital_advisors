@@ -60,9 +60,9 @@ import Layout from "../layouts/Layout.astro";
     <!-- Vision  -->
 
     <div class="about__vision">
-      <h3>Nuestra Vision</h3>
+      <h3 class="about__vision-content">Nuestra Vision</h3>
       <img src="/images/img-vision.png" alt="Vision" />
-      <p class="about__vision-text">
+      <p class="about__vision-text about__vision-content">
         Ser el referente en digitalización para pymes en Argentina,
         contribuyendo a la modernización del ecosistema empresarial mediante
         soluciones accesibles, efectivas y adaptadas a cada necesidad.
@@ -160,11 +160,7 @@ import Layout from "../layouts/Layout.astro";
     font-size: 17px;
     
   }
-
   
-  .container__about-presentacion {
-    background-color: aqua;
-  }
   .container__about-presentacion h2 {
     font-size: 30px;
   }
@@ -191,7 +187,7 @@ import Layout from "../layouts/Layout.astro";
     max-width: 1200px;
   }
 
-  p, li {
+  p, li, .about__vision p, .about__mision p{
     font-size: 20px;
   }
 
@@ -202,10 +198,78 @@ import Layout from "../layouts/Layout.astro";
     max-width: 100%;
   }
 
-  .about__mision,
-  .about__vision {
-    display: flex;
-    flex-direction: row;
+  /**Mision */
+  .about__mision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
   }
+
+  /* Imagen a la izquierda ocupando dos filas */
+  .about__mision img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  /* Título arriba a la derecha */
+  .about__mision h3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: auto auto 0;
+    font-size: 30px;
+  }
+
+  /* Párrafo abajo a la derecha */
+  .about__mision p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 auto auto;
+    width: 500px;
+  }
+  
+  /**Vision */
+  .about__vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  /* Imagen a la izquierda ocupando dos filas */
+  .about__vision img {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    width: auto;
+    max-height: 280px;
+    margin: 0 auto;
+  }
+
+  /* Título arriba a la derecha */
+  .about__vision h3 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto auto 0;
+    font-size: 30px;
+  }
+
+  /* Párrafo abajo a la derecha */
+  .about__vision p {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0 auto auto;
+    width: 500px;
+  }
+
 }
 </style>
