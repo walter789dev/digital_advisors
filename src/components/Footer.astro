@@ -1,21 +1,105 @@
-
-<div>
-    <div>
-        <img src="/images/logo.webp" alt="Logo">
-        <div class="footer__links">
-            <a href="/index">Inicio</a>
-            <a href="/services">Servicios</a>
-            <a href="/about">Quienes Somos</a>
-            <a href="/contact">Contacto</a>
-        </div>
-        <div class="footer__socials">
-            <a href="https://www.instagram.com/"><img src="/public/svg/Instagram.svg" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/"><img src="/public/svg/Linkedin.svg" alt="Linkedin"></a>
-            <a href="https://www.facebook.com/"><img src="/public/svg/Twitter.svg" alt="Twitter"></a>
-        </div>
-        <div>
-            <p>Copyright © 2025 Digital Advisors</p>
-            <p>Godoy Cruz, Mendoza, Argentina.</p>
-        </div>
+<footer class="footerContainer">
+  <div class="footer__datos">
+    <img class="footer__imgLogo" src="/images/logo.webp" alt="Logo" />
+    <div class="footer__links">
+      <a href="/index">Inicio</a>
+      <a href="/services">Servicios</a>
+      <a href="/about">Quienes Somos</a>
+      <a href="/contact">Contacto</a>
     </div>
-</div>
+    <div class="footer__socials">
+      <a href="https://www.instagram.com/"
+        ><img src="/public/svg/Instagram.svg" alt="Instagram" /></a
+      >
+      <a href="https://www.linkedin.com/"
+        ><img src="/public/svg/Linkedin.svg" alt="Linkedin" /></a
+      >
+      <a href="https://www.facebook.com/"
+        ><img src="/public/svg/Twitter.svg" alt="Twitter" /></a
+      >
+    </div>
+  </div>
+  <div class="footer__info">
+    <p>Copyright © 2025 Digital Advisors</p>
+    <p class="footer__info-unbicación">Godoy Cruz, Mendoza, Argentina.</p>
+  </div>
+</footer>
+
+<style>
+  /* Movile */
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+  }
+
+  .footer__datos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(70, 68, 68, 0.2);
+    height: 110px;
+  }
+
+  .footer__imgLogo {
+    width: 155px;
+  }
+  .footer__links,
+  .footer__info-unbicación {
+    display: none;
+  }
+
+  .footer__socials {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+  .footer__info p {
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .footer__datos {
+      height: 150px;
+    }
+    .footer__imgLogo {
+      width: 200px;
+    }
+
+    .footer__info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer__info p {
+      font-size: 14px;
+    }
+    .footer__info-unbicación {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__datos {
+      height: 150px;
+    }
+    
+    .footer__imgLogo{
+      width: 240px;
+    }
+
+    a {
+      all: unset;
+      font-size:  18px;
+    }
+
+    .footer__links{
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+      
+    }
+  }
+</style>
