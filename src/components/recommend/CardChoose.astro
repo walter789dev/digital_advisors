@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import ChooseImg from "../assets/images/data-protection.webp";
+import ChooseImg from "../../assets/images/data-protection.webp";
 
 const { title, description, reverse } = Astro.props;
 const classMd = reverse ? "md:flex-row-reverse" : "";
@@ -16,14 +16,21 @@ const classMd = reverse ? "md:flex-row-reverse" : "";
       alt="Elección para elegirnos"
     />
     <div class="absolute inset-0 flex items-center justify-center">
-      <h3 class="text-xl text-white font-semibold">{title}</h3>
+      <h3 class="text-xl text-white font-semibold md:hidden">{title}</h3>
     </div>
   </div>
   <figcaption
-    class=`md:flex md:items-center p-5 md:w-[50%] text-center text-(--accent-color) bg-white rounded-b-2xl`
+    class=`md:flex md:flex-col md:items-center md:justify-evenly p-5 md:w-[50%] text-center text-(--accent-color) bg-white rounded-b-2xl`
   >
-    <p class="responsive-text text-[14px]">
+  <h3 class="responsive-h3 text-(--primary-color) font-semibold">{title}</h3>
+    <p class="responsive-desk text-(--accent-color)">
       {description}
     </p>
   </figcaption>
 </figure>
+
+<style>
+  .responsive-desk {
+    font-size: clamp(14px, 0.125vw + 13.6px, 16px);
+  }
+</style>

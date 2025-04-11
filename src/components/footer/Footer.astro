@@ -1,0 +1,128 @@
+---
+import { Image } from "astro:assets";
+import imagen from "../../assets/images/logo.webp";
+import Instagram from '../../assets/svg/Instagram.svg'
+import Linkedin from '../../assets/svg/Linkedin.svg'
+import Twitter from '../../assets/svg/Twitter.svg'
+---
+
+<footer class="footerContainer">
+  <div class="footer__datos">
+    <Image class="footer__imgLogo" src={imagen} alt="logo" />
+    <div class="footer__links">
+      <a class="responsive-text" href="/">Inicio</a>
+      <a class="responsive-text" href="/services">Servicios</a>
+      <a class="responsive-text" href="/about">Quienes Somos</a>
+      <a class="responsive-text" href="/contact">Contacto</a>
+    </div>
+    <div class="footer__socials">
+      <a href="https://www.instagram.com/"
+        ><Image class="footer__imgLogo" src={Instagram} alt="Instagram" /></a
+      >
+      <a href="https://www.linkedin.com/"
+        ><Image class="footer__imgLogo" src={Linkedin} alt="Linkedin" /></a
+      >
+      <a href="https://www.facebook.com/"
+        ><Image class="footer__imgLogo" src={Twitter} alt="Twitter" /></a
+      >
+    </div>
+  </div>
+  <div class="footer__info">
+    <p>Copyright © 2025 Digital Advisors</p>
+    <p class="footer__info-unbicación">Godoy Cruz, Mendoza, Argentina.</p>
+  </div>
+</footer>
+
+<style>
+  /* Movile */
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+    padding: 30px 0px 0px;
+  }
+
+  .footer__datos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(70, 68, 68, 0.2);
+    height: 110px;
+  }
+
+  .footer__imgLogo {
+    width: 155px;
+  }
+  .footer__links,
+  .footer__info-unbicación {
+    display: none;
+  }
+
+  .footer__socials {
+    visibility: hidden;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+.footer__socials img{
+    width: 40px;
+}
+
+  .footer__info {
+    padding: 10px 0px;
+    margin-top: 10px;
+  }
+
+  .footer__info p {
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .footer__datos {
+      height: 150px;
+    }
+    .footer__imgLogo {
+      width: 200px;
+    }
+    .footer__socials {
+      visibility: visible;
+    }
+
+    .footer__info {
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+    }
+
+    .footer__info p {
+      font-size: 14px;
+    }
+    .footer__info-unbicación {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__datos {
+      padding-bottom: 50px;
+      height: 150px;
+    }
+
+    .footer__imgLogo {
+      width: 200px;
+    }
+
+    a {
+      all: unset;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>

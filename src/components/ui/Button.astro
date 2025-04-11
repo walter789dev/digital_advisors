@@ -1,0 +1,15 @@
+---
+const { text } = Astro.props;
+---
+
+<button
+  class="md:block py-2 px-4 text-[13px] font-semibold border border-transparent bg-(--primary-color) rounded-2xl responsive-btn text-white z-10"
+>
+  {text}
+</button>
+
+<style>
+  .responsive-btn {
+    font-size: clamp(14px, 0.125vw + 13.6px, 16px);
+  }
+</style>

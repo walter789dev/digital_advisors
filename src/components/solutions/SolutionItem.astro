@@ -1,0 +1,14 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center justify-center w-[45%] max-w-[300px] min-h-[100px] h-[18vh] md:h-fit md:p-5 gap-2 p-2 border border-[#0002] rounded-2xl"
+>
+  <slot name="icon-logo" />
+  <h3 class="responsive-h3 font-semibold text-(--primary-color)">{title}</h3>
+  <p class="hidden h-[100px] md:block text-(--accent-color)">
+    {description}
+  </p>
+</div>
+

@@ -1,9 +1,11 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
-import HeroImage from "../components/HeroImage.astro";
-import Solutions from "../components/Solutions.astro";
-import WhyChoose from "../components/WhyChoose.astro";
+import HeroImage from "../components/ui/HeroImage.astro";
+import Solutions from "../components/solutions/Solutions.astro";
+import WhyChoose from "../components/recommend/WhyChoose.astro";
+import PreFooter from "../components/footer/PreFooter.astro";
+
 
 const MainText = {
   title: "Impulsando tu transformación",
@@ -16,4 +18,5 @@ const MainText = {
   <HeroImage slot="hero-image" {...MainText} />
   <Solutions />
   <WhyChoose />
+  <PreFooter />
 </Layout>
