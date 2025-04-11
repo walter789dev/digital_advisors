@@ -1,0 +1,88 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="preFooterContainer">
+  <p class="preFooter__titulo">Contáctanos</p>
+  <p class="preFooter__descripcion">
+    Obtenga más información sobre nuestras servicios y soluciones
+  </p>
+  <Button />
+</div>
+
+<style>
+  .preFooterContainer {
+    position: relative;
+    background-image: url("/images/preFooter.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 240px;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preFooterContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* cambia el 0.5 por más o menos opacidad */
+    z-index: 1;
+  }
+
+  p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .preFooter__titulo {
+    font-size: 18px;
+  }
+
+  .preFooter__descripcion {
+    font-size: 16px;
+    padding: 0 110px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .preFooter__titulo {
+      font-size: 25px;
+    }
+
+    .preFooter__descripcion {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .preFooterContainer {
+    height: 300px;
+    }
+    .preFooter__titulo {
+      font-size: 35px;
+    }
+
+    .preFooter__descripcion {
+      font-size: 24px;
+    }
+  }
+
+</style>
