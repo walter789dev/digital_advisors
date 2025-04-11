@@ -2,16 +2,21 @@
 import SolutionItem from "./SolutionItem.astro";
 ---
 
-<section class="mt-6 p-5 text-center">
-  <h2 class="text-2xl font-semibold">
+<section class="mt-6 mx-auto p-5 max-w-[1100px] text-center">
+  <h2 class="responsive-h2 font-semibold">
     Nuestras <span class="text-(--primary-color)">soluciones</span>
   </h2>
-  <p class="mt-3 text-(--accent-color)">
+  <p class="mt-3 mx-auto max-w-[600px] text-(--accent-color) responsive-text">
     Te acompañamos en la implementación de soluciones integrales, asegurando que
     los datos estén el centro de cada decisión estratégica.
   </p>
-  <section class="flex flex-wrap place-content-between my-10 gap-y-7">
-    <SolutionItem title="Analisis de datos">
+  <section
+    class="flex flex-wrap place-content-center my-10 gap-y-7 gap-x-5 md:gap-x-15"
+  >
+    <SolutionItem
+      title="Analisis de datos"
+      description="Recopilación, interpretación y visualización para una toma de decisiones basada en información precisa."
+    >
       <svg
         slot="icon-logo"
         viewBox="0 0 24 24"
@@ -26,7 +31,10 @@ import SolutionItem from "./SolutionItem.astro";
           d="M4 12v6a8 3 0 0 0 16 0v-6"></path></svg
       >
     </SolutionItem>
-    <SolutionItem title="Digitalización de datos">
+    <SolutionItem
+      title="Digitalización de datos"
+      description="Diseño de plataformas para organizar y acceder a documentación de manera eficiente."
+    >
       <svg
         slot="icon-logo"
         viewBox="0 0 24 24"
@@ -46,7 +54,10 @@ import SolutionItem from "./SolutionItem.astro";
           d="M7 16v.01"></path></svg
       >
     </SolutionItem>
-    <SolutionItem title="Centralización de información">
+    <SolutionItem
+      title="Centralización de datos"
+      description="Creación de paneles interactivos con métricas clave en tiempo real."
+    >
       <svg
         slot="icon-logo"
         viewBox="0 0 24 24"
@@ -60,7 +71,10 @@ import SolutionItem from "./SolutionItem.astro";
         ></path></svg
       >
     </SolutionItem>
-    <SolutionItem title="Digitalización de procesos">
+    <SolutionItem
+      title="Digitalización de procesos"
+      description="Estructuración y optimización de la información para su acceso y análisis eficiente."
+    >
       <svg
         slot="icon-logo"
         viewBox="0 0 24 24"
@@ -75,7 +89,10 @@ import SolutionItem from "./SolutionItem.astro";
           d="M17 22l5 -3l-5 -3z"></path></svg
       >
     </SolutionItem>
-    <SolutionItem title="Desarrollo de dashboards">
+    <SolutionItem
+      title="Desarrollo de dashboards"
+      description=" Automatización de tareas y optimización de flujos de trabajo."
+    >
       <svg
         slot="icon-logo"
         viewBox="0 0 24 24"
@@ -96,7 +113,10 @@ import SolutionItem from "./SolutionItem.astro";
         ></path></svg
       >
     </SolutionItem>
-    <SolutionItem title="Marketing digital">
+    <SolutionItem
+      title="Marketing digital"
+      description="Estrategias para potenciar la presencia online, mejorar el posicionamiento y atraer más clientes."
+    >
       <svg
         slot="icon-logo"
         viewBox="0 0 24 24"

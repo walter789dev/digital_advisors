@@ -5,3 +5,19 @@
     --secondary-color: #F2F2F2;
     --accent-color: #464444;
 }
+
+.responsive-h1{
+    font-size: clamp(30px, 0.625vw + 28.000px, 40px);
+}
+
+.responsive-text{
+    font-size: clamp(14px, 0.250vw + 13.200px, 18px);
+}
+
+.responsive-h3{
+    font-size: clamp(14px, 0.375vw + 12.800px, 20px);
+}
+
+.responsive-h2{
+    font-size: clamp(24px, 0.375vw + 22.800px, 30px);
+}

@@ -21,19 +21,32 @@ const elections = [
 ---
 
 <section class="mt-4 pt-12 pb-2 bg-(--secondary-color)">
-  <h2 class="text-center text-2xl font-semibold">
-    ¿Por qué <span class="text-(--primary-color)">elegirnos</span>
+  <h2 class="responsive-h2 text-center text-2xl font-semibold">
+    ¿Por qué <span class="text-(--primary-color)">elegirnos?</span>
   </h2>
-  <p class="my-6 mx-5 text-center text-(--accent-color)">
+  <p
+    class="my-6 mx-5 md:mx-auto max-w-[600px] responsive-text text-center text-(--accent-color)"
+  >
     Nacimos con la misión de simplificar la transformación digital, ofreciendo
     soluciones personalizadas para optimizar procesos, analizar datos y mejorar
     la toma de decisiones.
   </p>
   <section class="mx-5 my-12">
     {
-      elections.map((election) => (
-        <CardChoose title={election.title} description={election.description} />
-      ))
+      elections.map((election, i) =>
+        i % 2 !== 0 ? (
+          <CardChoose
+            title={election.title}
+            description={election.description}
+            reverse={true}
+          />
+        ) : (
+          <CardChoose
+            title={election.title}
+            description={election.description}
+          />
+        )
+      )
     }
   </section>
 </section>

@@ -1,19 +1,19 @@
 ---
 import "../styles/global.css";
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import HeroImage from "../components/HeroImage.astro";
-import MainImage from '../assets/images/hero-image.webp'
 import Solutions from "../components/Solutions.astro";
 import WhyChoose from "../components/WhyChoose.astro";
 
 const MainText = {
-    title: "Impulsando tu transformación",
-    description: "Ayudamos a empresas a modernizar sus procesos con soluciones digitales a medida y optimizadas."
-}
+  title: "Impulsando tu transformación",
+  description:
+    "Ayudamos a pymes a modernizar sus procesos con soluciones digitales a medida, que optimizan sus datos y procesos para un crecimiento sostenible.",
+};
 ---
 
 <Layout>
-	<HeroImage slot="hero-image" image={MainImage} {...MainText} />
-    <Solutions />
-    <WhyChoose />
+  <HeroImage slot="hero-image" {...MainText} />
+  <Solutions />
+  <WhyChoose />
 </Layout>
