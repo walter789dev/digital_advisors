@@ -5,7 +5,7 @@ import Button from "../ui/Button.astro";
 <div class="preFooterContainer bg-[url(src/assets/images/preFooter.webp)]">
   <h3 class="preFooter__titulo responsive-h2">Contáctanos</h3>
   <p class="preFooter__descripcion responsive-text">
-    Obtenga más información sobre nuestras servicios y soluciones
+    Obtenga más información sobre nuestras servicios y soluciones.
   </p>
   <Button text="Contactanos" />
 </div>
@@ -17,7 +17,6 @@ import Button from "../ui/Button.astro";
     background-repeat: no-repeat;
     background-position: center;
     height: 240px;
-    width: 100vw;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -43,18 +42,13 @@ import Button from "../ui/Button.astro";
 
   p,
   h3 {
-    position: relative;
     z-index: 2;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .preFooter__descripcion {
-    padding: 0 110px;
     text-align: center;
-    margin: 10px 0px;
+    margin: 20px;
   }
 
   @media (min-width: 1024px) {

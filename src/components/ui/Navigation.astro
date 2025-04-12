@@ -3,21 +3,59 @@ import { Image } from "astro:assets";
 import LogoImage from "../../assets/images/logo.webp";
 ---
 
-<nav
-  class="sticky top-0 flex justify-between items-center h-12 px-3 border-b-1 border-b-gray-300 bg-white z-100"
->
-  <Image class="size-18" src={LogoImage} alt="Logo de Digital Advisors" />
-  <svg
-    width="35"
-    height="35"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"
-    ></path></svg
-  >
+<nav class="sticky top-0 border-b-1 border-b-gray-300 bg-white z-100">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center ml-2">
+      <Image class="size-16" src={LogoImage} alt="Logo de Digital Advisors" />
+    </div>
+    <div class="block md:hidden mr-4">
+      <button
+        id="menu-toggle"
+        class="flex items-center px-3 py-2 hover:text-white hover:border-white"
+      >
+        <svg class="fill-current h-7 w-7" viewBox="0 0 20 20"
+          ><title>Menu</title><path
+            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg
+        >
+      </button>
+    </div>
+    <div class="hidden md:block mr-5">
+      <a href="#" class="inline-block hover:text-(--primary-color) mr-10"
+        >Inicio</a
+      >
+      <a href="#" class="inline-block hover:text-(--primary-color) mr-10"
+        >Acerca de</a
+      >
+      <a href="#" class="inline-block hover:text-(--primary-color) mr-10"
+        >Servicios</a
+      >
+      <a href="#" class="inline-block hover:text-(--primary-color)"
+        >Contacto</a
+      >
+    </div>
+  </div>
+  <div id="menu-items" class="hidden md:hidden mx-2 my-2">
+    <a href="#" class="block font-semibold hover:text-white py-2 px-4">Inicio</a
+    >
+    <a href="#" class="block font-semibold hover:text-white py-2 px-4"
+      >Acerca de</a
+    >
+    <a href="#" class="block font-semibold hover:text-white py-2 px-4"
+      >Servicios</a
+    >
+    <a href="#" class="block font-semibold hover:text-white py-2 px-4"
+      >Contacto</a
+    >
+  </div>
 </nav>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuItems = document.getElementById("menu-items");
+
+  if (menuItems !== null && menuToggle !== null) {
+    menuToggle.addEventListener("click", () => {
+      menuItems.classList.toggle("hidden");
+    });
+  }
+</script>

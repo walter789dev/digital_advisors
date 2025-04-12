@@ -1,0 +1,114 @@
+---
+import PreFooter from "../components/footer/PreFooter.astro";
+import Layout from "../layouts/Layout.astro";
+import ImgContact from "../assets/images/contact.png";
+import "../styles/global.css";
+import { Image } from "astro:assets";
+---
+
+<Layout>
+  <section class="contactContainer">
+    <h2 class="contact__title responsive-h1 font-semibold">Contáctanos</h2>
+    <p class="contact__subtitle responsive-text">
+      Completa el siguiente formulario y te daremos respuesta en la brevedad.
+    </p>
+    <div class="contact-formImg">
+      <form
+        action="/enviar-formulario"
+        method="POST"
+        class="formulario-contacto"
+      >
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" name="ubicacion" required />
+        <label for="motivo">Motivo de contacto:</label>
+        <textarea id="motivo" name="motivo" rows="4" required></textarea>
+        <button type="submit">Hablemos</button>
+      </form>
+      <Image class="contact__img" src={ImgContact} alt="Llamada" />
+    </div>
+  </section>
+</Layout>
+<style>
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px 80px 0px;
+    border-bottom: 1px solid #46444454;
+  }
+  .contact__title {
+    color: #0a3d62;
+  }
+  .contact__subtitle {
+    text-align: center;
+  }
+
+  .contact-formImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    width: 90%;
+    margin: 0px auto;
+    padding: 7px;
+    border: 1px solid #464444;
+    border-radius: 4px;
+  }
+
+  label{
+    width: 90%;
+    margin: 0px auto;
+  }
+  textarea {
+    resize: none;
+  }
+  .formulario-contacto button {
+    background-color: #0a3d62c4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+  }
+  .formulario-contacto button:hover {
+    background-color: #0a3d62;
+  }
+  .contact__img {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .formulario-contacto button {
+      width: 250px;
+      font-size: 18px;
+    }
+    .contact-formImg {
+      gap: 50px;
+      align-items: center;
+    }
+    .contact__img {
+      display: flex;
+      max-height: 500px;
+      max-width: 500px;
+    }
+  }
+</style>
