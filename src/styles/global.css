@@ -6,12 +6,12 @@
   --accent-color: #464444;
 }
 
-main {
-  overflow-x: hidden;
+*{
+    font-family: "Playfair Display", serif;
 }
 
-* {
-  font-family: system-ui;
+main {
+  overflow-x: hidden;
 }
 
 .responsive-h1 {

@@ -1,28 +1,28 @@
 ---
 import { Image } from "astro:assets";
 import imagen from "../../assets/images/logo.webp";
-import Instagram from '../../assets/svg/Instagram.svg'
-import Linkedin from '../../assets/svg/Linkedin.svg'
-import Twitter from '../../assets/svg/Twitter.svg'
+import Instagram from "../../assets/svg/Instagram.svg";
+import Linkedin from "../../assets/svg/Linkedin.svg";
+import Twitter from "../../assets/svg/Twitter.svg";
 ---
 
 <footer class="footerContainer">
   <div class="footer__datos">
     <Image class="footer__imgLogo" src={imagen} alt="logo" />
     <div class="footer__links">
-      <a class="responsive-text" href="/">Inicio</a>
-      <a class="responsive-text" href="/services">Servicios</a>
-      <a class="responsive-text" href="/about">Quienes Somos</a>
-      <a class="responsive-text" href="/contact">Contacto</a>
+      <a href="/">Inicio</a>
+      <a href="/services">Servicios</a>
+      <a href="/about">Quienes Somos</a>
+      <a href="/contact">Contacto</a>
     </div>
     <div class="footer__socials">
-      <a href="https://www.instagram.com/"
+      <a target="_blank" href="https://www.instagram.com/"
         ><Image class="footer__imgLogo" src={Instagram} alt="Instagram" /></a
       >
-      <a href="https://www.linkedin.com/"
+      <a target="_blank" href="https://www.linkedin.com/"
         ><Image class="footer__imgLogo" src={Linkedin} alt="Linkedin" /></a
       >
-      <a href="https://www.facebook.com/"
+      <a target="_blank" href="https://www.facebook.com/"
         ><Image class="footer__imgLogo" src={Twitter} alt="Twitter" /></a
       >
     </div>
@@ -67,9 +67,9 @@ import Twitter from '../../assets/svg/Twitter.svg'
     cursor: pointer;
   }
 
-.footer__socials img{
+  .footer__socials img {
     width: 40px;
-}
+  }
 
   .footer__info {
     padding: 10px 0px;
@@ -123,6 +123,11 @@ import Twitter from '../../assets/svg/Twitter.svg'
       display: flex;
       flex-direction: column;
       gap: 10px;
+      cursor: pointer;
+    }
+
+    .footer__links a:hover {
+      color: #0652dd;
     }
   }
 </style>

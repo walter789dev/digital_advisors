@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/footer/Footer.astro";
 import Navigation from "../components/ui/Navigation.astro";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -8,7 +9,14 @@ import Navigation from "../components/ui/Navigation.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Digital Advisors | Impulsando tu transformación</title>
+    <title>{title} | Digital Advisors</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <Navigation />

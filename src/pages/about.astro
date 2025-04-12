@@ -8,7 +8,7 @@ import Mision from "../assets/images/mision.png";
 import "../styles/global.css";
 ---
 
-<Layout>
+<Layout title="Acerca de">
   <section class="container__about">
     <div class="container__about-presentacion">
       <h2 class="responsive-h2 font-semibold p-5">Quiénes somos</h2>
@@ -52,7 +52,7 @@ import "../styles/global.css";
     </div>
     <!-- Mision  -->
 
-    <div class="about__mision">
+    <div class="about__mision slide opacity-0">
       <h3 class="responsive-h2 font-semibold">Nuestra Misión</h3>
       <Image src={Mision} alt="Mision" />
       <p class="about__mision-text responsive-text text-(--accent-color)">
@@ -65,7 +65,7 @@ import "../styles/global.css";
 
     <!-- Vision  -->
 
-    <div class="about__vision">
+    <div class="about__vision slide opacity-0">
       <h3 class="about__vision-content responsive-h2 font-semibold">
         Nuestra Visión
       </h3>
@@ -107,7 +107,6 @@ import "../styles/global.css";
     text-align: center;
   }
 
- 
   .container__about-presentacion img {
     width: 100%;
     height: 290px;
@@ -137,10 +136,10 @@ import "../styles/global.css";
     height: 300px;
   }
 
-  .about__mision img, .about__vision img{
+  .about__mision img,
+  .about__vision img {
     width: 300px;
   }
-
 
   .about__mision-text,
   .about__vision-text {
@@ -159,8 +158,8 @@ import "../styles/global.css";
       text-align: center;
     }
 
-    .container__about{
-        max-width: 800px;
+    .container__about {
+      max-width: 800px;
     }
 
     .container__about-presentacion img {
@@ -177,7 +176,6 @@ import "../styles/global.css";
       max-width: 1200px;
     }
 
-    
     .container__about-presentacion img {
       max-width: 100%;
     }
@@ -252,5 +250,39 @@ import "../styles/global.css";
       margin: 0 auto auto;
       width: 500px;
     }
+
+    .slide-right {
+      animation: slide-right 0.4s linear both;
+    }
+    @keyframes slide-right {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
   }
 </style>
+
+<script>
+  const elementos = document.querySelectorAll(".slide");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, id) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-right");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  elementos.forEach((elemento) => {
+    observer.observe(elemento);
+  });
+</script>

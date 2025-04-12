@@ -1,14 +1,13 @@
 ---
-import PreFooter from "../components/footer/PreFooter.astro";
 import Layout from "../layouts/Layout.astro";
 import ImgContact from "../assets/images/contact.png";
 import "../styles/global.css";
 import { Image } from "astro:assets";
 ---
 
-<Layout>
+<Layout title="Contacto">
   <section class="contactContainer">
-    <h2 class="contact__title responsive-h1 font-semibold">Contáctanos</h2>
+    <h2 class="contact__title responsive-h2 font-semibold">Contáctanos</h2>
     <p class="contact__subtitle responsive-text">
       Completa el siguiente formulario y te daremos respuesta en la brevedad.
     </p>
@@ -72,7 +71,7 @@ import { Image } from "astro:assets";
     border-radius: 4px;
   }
 
-  label{
+  label {
     width: 90%;
     margin: 0px auto;
   }
@@ -80,7 +79,7 @@ import { Image } from "astro:assets";
     resize: none;
   }
   .formulario-contacto button {
-    background-color: #0a3d62c4;
+    background-color: #0a3d62;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -90,7 +89,7 @@ import { Image } from "astro:assets";
     margin-top: 20px;
   }
   .formulario-contacto button:hover {
-    background-color: #0a3d62;
+    background-color: #0a48bc;
   }
   .contact__img {
     display: none;

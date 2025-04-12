@@ -35,13 +35,13 @@ const classMd = reverse ? "md:flex-row-reverse" : "";
   }
 
   .slide-right {
-    animation: slide-right 0.4s linear both;
+    animation: slide-right .7s linear both;
   }
 
   @keyframes slide-right {
     0% {
         opacity: 0;
-      transform: translateX(-100px);
+      transform: translateX(-150px);
     }
     100% {
         opacity: 1;
@@ -62,7 +62,7 @@ const classMd = reverse ? "md:flex-row-reverse" : "";
         }
       });
     },
-    { threshold: 0.4 }
+    { threshold: 0.6 }
   );
 
   elementos.forEach((elemento) => {
