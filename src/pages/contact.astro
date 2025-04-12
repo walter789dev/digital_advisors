@@ -8,25 +8,28 @@ import Layout from "../layouts/Layout.astro";
     <p class="contact__subtitle">
       Completa el siguiente formulario y te daremos respuesta en la brevedad.
     </p>
+    <div class="contact-formImg">
+        
     <form action="/enviar-formulario" method="POST" class="formulario-contacto">
-      <label for="empresa">Empresa:</label>
-      <input type="text" id="empresa" name="empresa" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" required />
-
-      <label for="ubicacion">Ubicación:</label>
-      <input type="text" id="ubicacion" name="ubicacion" required />
-
-      <label for="motivo">Motivo de contacto:</label>
-      <textarea id="motivo" name="motivo" rows="4" required></textarea>
-
-      <button type="submit">Hablemos</button>
-    </form>
-    <img class="contact__img" src="/images/contact.png" alt="Llamada" />
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa" required />
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+  
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" name="ubicacion" required />
+  
+        <label for="motivo">Motivo de contacto:</label>
+        <textarea id="motivo" name="motivo" rows="4" required></textarea>
+  
+        <button type="submit">Hablemos</button>
+      </form>
+      <img class="contact__img" src="/images/contact.png" alt="Llamada" />
+    </div>
   </section>
 </Layout>
 
@@ -46,8 +49,14 @@ import Layout from "../layouts/Layout.astro";
 
   .contact__subtitle {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
   }
+
+.contact-formImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
   .formulario-contacto {
     display: flex;
     flex-direction: column;
@@ -90,4 +99,34 @@ import Layout from "../layouts/Layout.astro";
   }
   
   
+  @media (min-width: 768px) {
+   .contact__title {
+    font-size: 35px;
+  }
+  }
+
+  @media (min-width: 1024px) {
+    .contact__title {
+    font-size: 50px;
+  }
+
+  .contact__subtitle{
+    font-size: 20px;
+  }
+  .formulario-contacto button {
+    width: 250px;
+    font-size: 18px ;
+}
+  .contact-formImg{
+    gap: 50px;
+    align-items: center;
+  }
+  .contact__img{
+    display: flex;
+    max-height: 500px;
+    max-width: 500px;
+  }
+  
+
+  }
 </style>
