@@ -5,8 +5,9 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <div class="servicesContainer">
     <div class="serviceCard">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
+        
         <h3 class="serviceCard__title">Análisis de Datos</h3>
         <p class="serviceCard__description">
           Recopilamos, interpretamos y visualizamos información para fundamentar
@@ -25,8 +26,8 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <div class="serviceCard">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
         <h3 class="serviceCard__title">Centralización de Información</h3>
         <p class="serviceCard__description">
           Diseñamos plataformas que centralizan tu documentación, permitiendo un
@@ -45,8 +46,9 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <div class="serviceCard">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
+        
         <h3 class="serviceCard__title">Desarrollo de Dashboard</h3>
         <p class="serviceCard__description">
           Creamos paneles interactivos que presentan métricas en tiempo real.
@@ -65,8 +67,8 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <div class="serviceCard">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
         <h3 class="serviceCard__title">Digitalización de Datos</h3>
         <p class="serviceCard__description">
           Optimizamos tu información para garantizar un acceso y análisis
@@ -86,8 +88,8 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <div class="serviceCard">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
         <h3 class="serviceCard__title">Digitalización de Procesos</h3>
         <p class="serviceCard__description">
           Automatizamos tareas y optimizamos flujos de trabajo mediante
@@ -106,8 +108,8 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <div class="serviceCard">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
         <h3 class="serviceCard__title">Marketing Digital</h3>
         <p class="serviceCard__description">
           Creamos estrategias digitales para potenciar tu presencia online,
@@ -125,8 +127,8 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
     <div class="serviceCard serviceCard-last">
-      <div class="serviceCard__top">
         <div class="serviceCard__icon"></div>
+      <div class="serviceCard__top">
         <h3 class="serviceCard__title">
           Asesoramiento Growth y Mejora Continua
         </h3>
@@ -160,6 +162,9 @@ import Layout from "../layouts/Layout.astro";
 
   .serviceCard {
     grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .serviceCard__top {
@@ -176,6 +181,7 @@ import Layout from "../layouts/Layout.astro";
     width: 75px;
     height: 75px;
     border-radius: 50%;
+    border: 1px solid white;
   }
 
   .serviceCard__title {
@@ -208,16 +214,25 @@ import Layout from "../layouts/Layout.astro";
     .servicesContainer {
       padding: 100px;
       gap: 70px;
+
+    }
+
+    .serviceCard__icon{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
     }
 
     .serviceCard {
       max-width: 510px;
-      padding-bottom: 150px;
+      padding-top: 39px;
       position: relative;
     }
 
     .serviceCard__top {
-      padding: 0 20px 25px;
+      padding: 40px 20px 25px;
       border-radius: 20px;
       box-shadow: 2px 3px 11px rgba(10, 61, 98, 0.6);
       position: relative;
@@ -233,14 +248,18 @@ import Layout from "../layouts/Layout.astro";
       font-size: 16px;
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1030px) {
     .servicesContainer {
       padding: 100px;
       gap: 75px;
+      row-gap: 40px;
     }
 
+    .serviceCard{
+        padding-bottom: 135px;
+    }
     .serviceCard__top {
-      padding: 0 50px 25px;
+      padding: 40px 50px 25px;
     }
 
     .serviceCard__title {
