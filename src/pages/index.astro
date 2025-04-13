@@ -5,7 +5,7 @@ import HeroImage from "../components/ui/HeroImage.astro";
 import Solutions from "../components/solutions/Solutions.astro";
 import WhyChoose from "../components/recommend/WhyChoose.astro";
 import PreFooter from "../components/footer/PreFooter.astro";
-
+import Button from "../components/ui/Button.astro";
 
 const MainText = {
   title: "Impulsando tu transformación",
@@ -15,7 +15,9 @@ const MainText = {
 ---
 
 <Layout title="Inicio">
-  <HeroImage slot="hero-image" {...MainText} />
+  <HeroImage slot="hero-image" {...MainText}>
+    <Button text="Consulta gratis" />
+  </HeroImage>
   <Solutions />
   <WhyChoose />
   <PreFooter />

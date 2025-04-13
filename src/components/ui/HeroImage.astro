@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "./Button.astro";
 import MainImage from "../../assets/images/hero-image-lg.webp";
 const { title, description } = Astro.props;
 ---
@@ -17,9 +16,9 @@ const { title, description } = Astro.props;
     <p class="my-4 max-w-[600px] md:text-start responsive-text">
       {description}
     </p>
-    <Button text="Consulta gratis" />
+    <slot />
   </div>
-  <div class="size-full absolute inset-0 brightness-50 z-0">
+  <div class="size-full absolute inset-0 z-0">
     <Image
       class="size-full object-cover"
       src={MainImage}
