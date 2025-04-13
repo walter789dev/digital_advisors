@@ -1,0 +1,189 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="servicesContainer">
+    <div class="serviceCard">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Análisis de Datos</h3>
+        <p class="serviceCard__description">
+            Recopilamos, interpretamos y visualizamos información para fundamentar
+            decisiones empresariales.
+        </p>
+        <p class="serviceCard__description-desktop">
+            Transformamos datos en insights estratégicos. Recopilamos, interpretamos
+            y visualizamos información para fundamentar decisiones empresariales con
+            precisión y confianza.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li>Toma de decisiones basada en datos objetivos.</li>
+            <li>Identificación de tendencias y oportunidades.</li>
+            <li>Comprensión profunda del rendimiento empresarial.</li>
+        </ul>
+    </div>
+    <div class="serviceCard">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Centralización de Información</h3>
+        <p class="serviceCard__description">
+            Diseñamos plataformas que centralizan tu documentación, permitiendo un acceso rápido, seguro.
+        </p>
+        <p class="serviceCard__description-desktop">
+            Diseñamos plataformas inteligentes que centralizan tu documentación, permitiendo un acceso rápido, seguro y eficiente a la información crítica de tu organización.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li>Gestión documental centralizada.</li>
+            <li>Acceso inmediato a la información.</li>
+            <li>Mejora de la colaboración interdepartamental.</li>
+        </ul>
+    </div>
+    <div class="serviceCard">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Desarrollo de Dashboard</h3>
+        <p class="serviceCard__description">
+            Creamos paneles interactivos que presentan métricas en tiempo real. 
+        </p>
+        <p class="serviceCard__description-desktop">
+            Creamos paneles interactivos que presentan métricas clave en tiempo real, proporcionando una visión panorámica del rendimiento de tu negocio.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li>Visualización instantánea de indicadores.</li>
+            <li>Seguimiento en tiempo real.</li>
+            <li>Toma de decisiones ágil y fundamentada.</li>
+    </div>
+    <div class="serviceCard">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Digitalización de Datos</h3>
+        <p class="serviceCard__description">
+            Optimizamos tu información para garantizar un acceso y análisis eficiente.
+        </p>
+        <p class="serviceCard__description-desktop">
+            Estructuramos y optimizamos tu información para garantizar un acceso y análisis eficiente, transformando datos brutos en activos estratégicos.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li>Estructuración de bases de datos.</li>
+            <li>Limpieza y validación de información.</li>
+            <li>Optimización de flujos de datos.</li>
+    </div>
+    <div class="serviceCard">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Digitalización de Procesos</h3>
+        <p class="serviceCard__description">
+            Automatizamos tareas y optimizamos flujos de trabajo mediante soluciones tecnológicas que aumentan la productividad.
+        </p>
+        <p class="serviceCard__description-desktop">
+            Automatizamos tareas y optimizamos flujos de trabajo mediante soluciones tecnológicas que aumentan la productividad y reducen la carga operativa.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li>Reducción de tiempos de proceso.</li>
+            <li>Minimización de errores manuales.</li>
+            <li>Aumento de la eficiencia operativa.</li>
+    </div>
+    <div class="serviceCard">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Marketing Digital</h3>
+        <p class="serviceCard__description">
+            Creamos estrategias digitales para potenciar tu presencia online, mejorar tu posicionamiento y atraer nuevos clientes.
+        </p>
+        <p class="serviceCard__description-desktop">
+            Desarrollamos estrategias digitales integrales para potenciar tu presencia online, mejorar tu posicionamiento y atraer nuevos clientes.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li>Posicionamiento SEO.</li>
+            <li>Campañas de marketing digital.</li>
+            <li>Análisis de rendimiento de marketing.</li>
+    </div>
+    <div class="serviceCard serviceCard-last">
+        <div class="serviceCard__icon"></div>
+        <h3 class="serviceCard__title">Asesoramiento Growth y Mejora Continua
+        </h3>
+        <p class="serviceCard__description">
+            Analizamos tus procesos para detectar cuellos de botella, eliminar desperdicios y optimizar operaciones.
+        </p>
+        <p class="serviceCard__description-desktop">
+            Analizamos tus procesos para detectar cuellos de botella, eliminar desperdicios y optimizar operaciones. A partir de datos reales, te ayudamos a tomar decisiones estratégicas que impulsen los procesos que generan valor y potencien el crecimiento sostenido de tu empresa.
+        </p>
+        <ul class="serviceCard__details-desktop">
+            <li></li>
+            <li></li>
+            <li></li>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* vista Mobile */
+  .serviceCard__details-desktop,
+  .serviceCard__description-desktop {
+    display: none;
+  }
+
+  .serviceCard{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .serviceCard-last{
+    grid-column: 2 / 4;
+  }
+  .serviceCard__icon{
+    background-color: #0A3D62;
+    width:75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  
+  .serviceCard__title{
+    color: #0A3D62;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .serviceCard__description{
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .servicesContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  grid-template-rows: repeat(7, auto);   /* 7 filas que crecen según el contenido */
+  gap: 10px;
+  row-gap: 50px;
+  padding: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .serviceCard__description{
+        display: none;
+    }
+    .servicesContainer{
+        padding: 100px;
+        gap: 70px;
+    }
+
+    .serviceCard{
+        max-width: 510px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 2px 3px 11px rgba(10, 61, 98, 0.6);
+    }
+    
+    .serviceCard__title{
+    font-size: 18px;
+    }
+    .serviceCard__description-desktop{
+        display: block;
+        font-size: 16px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .servicesContainer{
+        padding: 150px;
+        gap: 75px;
+    }
+  }
+</style>
