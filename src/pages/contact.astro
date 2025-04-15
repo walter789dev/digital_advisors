@@ -13,19 +13,51 @@ import { Image } from "astro:assets";
     </p>
     <div class="contact-formImg">
       <form
-        action="/enviar-formulario"
-        method="POST"
         class="formulario-contacto"
+        action="https://formsubmit.co/93fafe35fb24ba1bc3e98d3a7d105be3"
+        method="POST"
       >
-        <label for="empresa">Empresa:</label>
-        <input type="text" id="empresa" name="empresa" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required />
-        <label for="ubicacion">Ubicación:</label>
-        <input type="text" id="ubicacion" name="ubicacion" required />
-        <label for="motivo">Motivo de contacto:</label>
+        <label for="empresa">Empresa</label>
+        <input
+          type="text"
+          id="empresa"
+          name="empresa"
+          pattern="^[a-zA-Z0-9]{5,}$"
+          title="Debe contener al menos 5 caracteres"
+          required
+          autocomplete="off"
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$$"
+          title="Ingrese un correo valido"
+          required
+          autocomplete="off"
+        />
+        <label for="telefono">Teléfono</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          pattern="^[\d\s\-()+]{7,}$"
+          title="Ingrese un número valido"
+          required
+          autocomplete="off"
+        />
+        <label for="ubicacion">Ubicación</label>
+        <input
+          type="text"
+          id="ubicacion"
+          name="ubicacion"
+          pattern=".{5,}"
+          title="Ingrese una ubicación valida"
+          required
+          autocomplete="off"
+        />
+        <label for="motivo">Motivo de contacto</label>
         <textarea id="motivo" name="motivo" rows="4" required></textarea>
         <button type="submit">Hablemos</button>
       </form>
@@ -34,6 +66,12 @@ import { Image } from "astro:assets";
   </section>
 </Layout>
 <style>
+  label::after {
+    content: "*";
+    margin-left: 5px;
+    color: red;
+  }
+
   .contactContainer {
     display: flex;
     flex-direction: column;
@@ -108,6 +146,9 @@ import { Image } from "astro:assets";
       display: flex;
       max-height: 500px;
       max-width: 500px;
+    }
+    .close {
+      visibility: hidden;
     }
   }
 </style>
