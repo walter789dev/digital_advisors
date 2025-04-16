@@ -10,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
     </p>
     <div class="contact-formImg">
         
-    <form action="/enviar-formulario" method="POST" class="formulario-contacto">
+    <form id="mi-formulario" method="post" action="/api/enviar-formulario" class="formulario-contacto">
         <label for="empresa">Empresa:</label>
         <input type="text" id="empresa" name="empresa" required />
   
@@ -130,3 +130,36 @@ import Layout from "../layouts/Layout.astro";
 
   }
 </style>
+
+<!-- <script>
+  const form = document.getElementById('mi-formulario') as HTMLFormElement;
+
+  if (form) {
+    form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form)
+
+  try {
+    const response = await fetch('/api/enviar-formulario', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData.toString()
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log(result.message); // Muestra el mensaje de la API
+    } else {
+      console.error('Error al enviar el formulario.');
+    }
+  } catch (error) {
+    console.error('Error de red:', error);
+  }
+});
+  }
+
+
+</script> -->
