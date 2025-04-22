@@ -1,8 +1,13 @@
 ---
 import Button from "../ui/Button.astro";
+import Imagen from '../../assets/images/preFooter.webp'
+import { Image } from "astro:assets";
 ---
 
-<div class="preFooterContainer bg-[url(src/assets/images/preFooter.webp)]">
+<div class="preFooterContainer">
+    <div class="absolute size-full">
+        <Image class="size-full object-cover" src={Imagen} alt="Fondo" />
+    </div>
   <h3 class="preFooter__titulo responsive-h2">Contáctanos</h3>
   <p class="preFooter__descripcion responsive-text">
     Obtenga más información sobre nuestras servicios y soluciones.
