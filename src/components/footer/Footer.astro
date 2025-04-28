@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import imagen from "../../assets/images/logo.webp";
 import Instagram from "../../assets/svg/Instagram.svg";
 import Linkedin from "../../assets/svg/Linkedin.svg";
-import Twitter from "../../assets/svg/Twitter.svg";
 ---
 
 <footer class="footerContainer">
@@ -16,14 +15,13 @@ import Twitter from "../../assets/svg/Twitter.svg";
       <a href="/contact">Contacto</a>
     </div>
     <div class="footer__socials">
-      <a target="_blank" href="https://www.instagram.com/"
+      <a target="_blank" href="https://www.instagram.com/digital_advisors_/"
         ><Image class="footer__imgLogo" src={Instagram} alt="Instagram" /></a
       >
-      <a target="_blank" href="https://www.linkedin.com/"
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/company/digital-advisors-company/"
         ><Image class="footer__imgLogo" src={Linkedin} alt="Linkedin" /></a
-      >
-      <a target="_blank" href="https://www.facebook.com/"
-        ><Image class="footer__imgLogo" src={Twitter} alt="Twitter" /></a
       >
     </div>
   </div>
