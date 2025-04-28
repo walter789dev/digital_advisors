@@ -250,19 +250,18 @@ import "../styles/global.css";
       margin: 0 auto auto;
       width: 500px;
     }
-
-    .slide-right {
-      animation: slide-right 0.4s linear both;
+  }
+  .slide-right {
+    animation: slide-right 0.4s linear both;
+  }
+  @keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
     }
-    @keyframes slide-right {
-      0% {
-        opacity: 0;
-        transform: translateX(100px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0px);
-      }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
     }
   }
 </style>
