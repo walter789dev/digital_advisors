@@ -1,8 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import ChooseImg from "../../assets/images/data-protection.webp";
 
-const { title, description, reverse } = Astro.props;
+const { title, description, reverse, image } = Astro.props;
 const classMd = reverse ? "md:flex-row-reverse" : "";
 ---
 
@@ -11,8 +10,8 @@ const classMd = reverse ? "md:flex-row-reverse" : "";
 >
   <div class="relative h-[130px] md:w-[50%] md:h-[250px]">
     <Image
-      class="size-full object-cover brightness-50"
-      src={ChooseImg}
+      class="size-full object-cover brightness-75"
+      src={image}
       alt="Elección para elegirnos"
     />
     <div class="absolute inset-0 flex items-center justify-center">
@@ -20,9 +19,9 @@ const classMd = reverse ? "md:flex-row-reverse" : "";
     </div>
   </div>
   <figcaption
-    class=`md:flex md:flex-col md:items-center md:justify-evenly p-5 md:w-[50%] text-center text-(--accent-color) bg-white rounded-b-2xl`
+    class=`md:flex md:flex-col md:items-center md:justify-evenly p-5 md:w-[50%] text-center text-(--accent-color) bg-white`
   >
-    <h3 class="responsive-h3 text-(--primary-color) font-semibold">{title}</h3>
+    <h3 class="hidden md:block mb-2 md:mb-0 responsive-h3 text-(--primary-color) font-semibold">{title}</h3>
     <p class="responsive-desk text-(--accent-color)">
       {description}
     </p>

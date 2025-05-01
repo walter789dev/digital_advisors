@@ -54,14 +54,32 @@ main {
 
 @keyframes tracking-in-expand-forward-bottom {
   0% {
-    transform: translateZ(-700px) translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
   }
   40% {
     opacity: 0.6;
   }
   100% {
-    transform: translateZ(0) translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
+
+.expandHeight {
+    animation: expandHeight .4s ease-out both;
+}
+
+  @keyframes expandHeight {
+      from {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        color: transparent;
+      }
+      to {
+        height: 160px;
+        opacity: 1;
+        color: #000;
+      }
+    }

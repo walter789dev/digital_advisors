@@ -10,10 +10,12 @@ const { title, description } = Astro.props;
   <div
     class="px-5 text-white text-center z-10 md:ml-10 tracking-in-expand-forward-top"
   >
-    <h1 class="responsive-h1 text-center md:text-start font-semibold">
+    <h1
+      class="mb-8 md:mb-0 responsive-h1 text-center md:text-start font-semibold"
+    >
       {title}
     </h1>
-    <p class="my-4 max-w-[600px] md:text-start responsive-text">
+    <p class="hidden md:block my-4 max-w-[600px] md:text-start responsive-text">
       {description}
     </p>
     <slot />
@@ -29,7 +31,6 @@ const { title, description } = Astro.props;
 
 <style>
   .responsive-hero {
-    height: clamp(300px, 14.375vw + 254px, 530px);
+    height: clamp(250px, 17.5vw + 194px, 530px);
   }
-
 </style>
