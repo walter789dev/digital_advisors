@@ -2,6 +2,8 @@
 import Footer from "../components/footer/Footer.astro";
 import Navigation from "../components/ui/Navigation.astro";
 const { title } = Astro.props;
+const description =
+  "Ayudamos a pymes a modernizar sus procesos con soluciones digitales a medida, que optimizan sus datos y procesos para un crecimiento sostenible.";
 ---
 
 <!doctype html>
@@ -10,7 +12,26 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Digital Advisors</title>
-    <link rel="shortcut icon" href="logo.png" />
+    <meta name="description" content={description} />
+    <link rel="shortcut icon" href="/public/logo.png" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="marketing digital, seo, publicidad en redes, estrategia de contenido, digital advisors, análisis de datos, desarrollo de dashboards, centralizacion de informacion, digitalizacion de datos, digtalizacion de procesos, asesoramiento growth, análisis de métricas, estructuración de bases de datos"
+    />
+    <!-- ---------------- Redes sociales ---------------->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | Digital Advisors`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/public/logo.png" />
+    <meta property="og:url" content="https://www.digitaladvisors.com.ar" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | Digital Advisors`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/public/logo.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- ---------------- Tipografia --------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
