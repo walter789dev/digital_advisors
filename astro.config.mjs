@@ -11,4 +11,5 @@ export default defineConfig({
   },
   site: "https://www.digitaladvisors.com.ar",
   integrations: [sitemap()],
+  output: "server",
 });

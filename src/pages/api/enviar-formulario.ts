@@ -1,5 +1,3 @@
-export const prerender = false;
-
 import "dotenv/config";
 import type { APIRoute } from "astro";
 import nodemailer from "nodemailer";
