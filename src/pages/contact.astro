@@ -14,8 +14,9 @@ import { Image } from "astro:assets";
     <div class="contact-formImg">
       <form
         class="formulario-contacto"
-        action="https://formsubmit.co/93fafe35fb24ba1bc3e98d3a7d105be3"
+        action="api/enviar-formulario"
         method="POST"
+        enctype="application/x-www-form-urlencoded"
       >
         <label for="empresa">Empresa</label>
         <input

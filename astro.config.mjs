@@ -1,6 +1,9 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineConfig({
   vite: {
