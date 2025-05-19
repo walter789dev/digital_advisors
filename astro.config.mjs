@@ -14,4 +14,7 @@ export default defineConfig({
   integrations: [sitemap()],
   output: "server",
   adapter: netlify(),
+  experimental: {
+    session: true,
+  },
 });
